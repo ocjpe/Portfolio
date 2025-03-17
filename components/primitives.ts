@@ -11,6 +11,8 @@ export const title = tv({
       green: "from-[#6FEE8D] to-[#17c964]",
       pink: "from-[#FF72E1] to-[#F54C7A]",
       foreground: "dark:from-[#FFFFFF] dark:to-[#4B4B4B]",
+      gradient:
+        "bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent",
     },
     size: {
       sm: "text-3xl lg:text-4xl",
@@ -45,6 +47,11 @@ export const subtitle = tv({
   variants: {
     fullWidth: {
       true: "!w-full",
+    },
+    size: {
+      sm: "text-3xl lg:text-4xl",
+      md: "text-[2.3rem] lg:text-5xl leading-9",
+      lg: "text-4xl lg:text-6xl",
     },
   },
   defaultVariants: {

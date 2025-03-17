@@ -1,55 +1,50 @@
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
-
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import {
+  DiscordIcon,
+  GithubIcon,
+  GitlabIcon,
+  LinkedinIcon,
+} from "@/components/icons";
+import { title } from "@/components/primitives";
+import { Button } from "@heroui/button";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Make&nbsp;</span>
-        <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
-        <br />
-        <span className={title()}>
-          websites regardless of your design experience.
-        </span>
-        <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
-        </div>
-      </div>
-
-      <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
+    <section className="flex flex-col items-start justify-around py-10 md:py-10">
+      <div className="text-start justify-around">
+        {/* Titre */}
+        <div>
+          <span className={title({ size: "lg" })}>{"Bonjour. Je suis "}</span>
+          <span className={title({ size: "lg", color: "gradient" })}>
+            Océane
           </span>
-        </Snippet>
+          <span className={title({ size: "lg" })}>{", "}</span>
+        </div>
+        <br />
+        <div>
+          <span className={title({ size: "lg", color: "gradient" })}>
+            développeuse informatique
+          </span>
+        </div>
+
+        {/* Réseaux sociaux */}
+        <div className="flex pt-10 justify-between">
+          {/* Github */}
+          <Button color="secondary" endContent={<GithubIcon />}>
+            GitHub
+          </Button>
+          {/* GitLab */}
+          <Button color="secondary" endContent={<GitlabIcon />}>
+            GitLab
+          </Button>
+          {/* Discord */}
+          <Button color="secondary" endContent={<DiscordIcon />}>
+            Discord
+          </Button>
+          {/* Linkedin */}
+          <Button color="secondary" endContent={<LinkedinIcon />}>
+            Linkedin
+          </Button>
+        </div>
       </div>
     </section>
   );
