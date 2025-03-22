@@ -23,7 +23,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   "text-lg uppercase font-mono",
-                  fontMono.variable
+                  fontMono.variable,
                 )}
                 color="foreground"
                 href={item.href}
