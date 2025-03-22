@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Océane's portfolio",
+  name: "Portfolio d'Océane",
   description: "Voici mon parcours professionnel.",
   navItems: [
     {
@@ -25,7 +25,6 @@ export const siteConfig = {
   links: {
     github: "https://github.com/ocjpe",
     gitlab: "https://gitlab.com/ocejpe",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    linkedin: "",
+    linkedin: "https://linkedin.com/in/océane-joppé",
   },
 };

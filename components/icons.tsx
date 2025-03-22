@@ -24,27 +24,6 @@ export const Logo: React.FC<IconSvgProps> = ({
   </svg>
 );
 
-export const DiscordIcon: React.FC<IconSvgProps> = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}) => {
-  return (
-    <svg
-      height={size || height}
-      viewBox="0 0 24 24"
-      width={size || width}
-      {...props}
-    >
-      <path
-        d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1 14.66 14.66 0 0 0-4.58 0 10.14 10.14 0 0 0-.53-1.1 16 16 0 0 0-4.13 1.3 17.33 17.33 0 0 0-3 11.59 16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83 3.39 3.39 0 0 0 .42-.33 11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84 12.41 12.41 0 0 0 1.08 1.78 16.44 16.44 0 0 0 5.06-2.59 17.22 17.22 0 0 0-3-11.59 16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.93 1.93 0 0 1 1.8 2 1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.92 1.92 0 0 1 1.8 2 1.92 1.92 0 0 1-1.8 2z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-};
-
 export const LinkedinIcon: React.FC<IconSvgProps> = ({
   size = 24,
   width,
@@ -53,21 +32,17 @@ export const LinkedinIcon: React.FC<IconSvgProps> = ({
 }) => {
   return (
     <svg
-      aria-hidden="true"
-      className="w-6 h-6 text-gray-800 dark:text-white"
-      fill="currentColor"
       height={size || height}
       viewBox="0 0 24 24"
       width={size || width}
-      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <path
         clipRule="evenodd"
         d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
-        fillRule="evenodd"
+        fill="currentColor"
       />
-      <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
+      <path d="M7.2 8.809H4V19.5h3.2V8.809Z" fill="currentColor" />
     </svg>
   );
 };
@@ -80,13 +55,9 @@ export const GitlabIcon: React.FC<IconSvgProps> = ({
 }) => {
   return (
     <svg
-      aria-hidden="true"
-      className="w-6 h-6 text-gray-800 dark:text-white"
-      fill="none"
       height={size || height}
       viewBox="0 0 24 24"
       width={size || width}
-      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <path
@@ -111,10 +82,8 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
       {...props}
     >
       <path
-        clipRule="evenodd"
         d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
         fill="currentColor"
-        fillRule="evenodd"
       />
     </svg>
   );
