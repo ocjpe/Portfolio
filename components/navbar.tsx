@@ -12,7 +12,7 @@ import { fontMono } from "@/config/fonts";
 export const Navbar = () => {
   return (
     <HeroUINavbar
-      className="bg-transparent backdrop-blur-none backdrop-saturate-100"
+      className="backdrop-blur-none backdrop-saturate-100"
       maxWidth="xl"
       position="sticky"
     >
@@ -23,7 +23,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   "text-lg uppercase font-mono",
-                  fontMono.variable,
+                  fontMono.variable
                 )}
                 color="foreground"
                 href={item.href}
