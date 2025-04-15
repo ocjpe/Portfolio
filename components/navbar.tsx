@@ -12,7 +12,7 @@ import { fontMono } from "@/config/fonts";
 export const Navbar = () => {
   return (
     <HeroUINavbar
-      className="bg-transparent backdrop-blur-none backdrop-saturate-100"
+      className="backdrop-blur-none backdrop-saturate-100"
       maxWidth="xl"
       position="sticky"
     >

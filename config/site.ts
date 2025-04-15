@@ -25,6 +25,6 @@ export const siteConfig = {
   links: {
     github: "https://github.com/ocjpe",
     gitlab: "https://gitlab.com/ocejpe",
-    linkedin: "https://linkedin.com/in/océane-joppé",
+    linkedin: "https://linkedin.com/in/oceane-joppe",
   },
 };
