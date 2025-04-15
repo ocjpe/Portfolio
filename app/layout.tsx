@@ -1,7 +1,9 @@
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import clsx from "clsx";
+
 import { Providers } from "./providers";
+
 import { siteConfig } from "@/config/site";
 import { Navbar } from "@/components/navbar";
 import { fontMono } from "@/config/fonts";
@@ -25,7 +27,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background font-mono antialiased m-2",
-          fontMono.variable
+          fontMono.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class" }}>

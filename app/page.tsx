@@ -6,10 +6,11 @@ import {
   FaGitlab,
   FaArrowDownLong,
 } from "react-icons/fa6";
+import Image from "next/image";
+
 import { title } from "@/components/primitives";
 import { siteConfig } from "@/config/site";
 import SkillsSection from "@/components/skillsSection";
-import Image from "next/image";
 
 export default function Home() {
   const socialLinks = [
@@ -85,11 +86,11 @@ export default function Home() {
               {/* Image centrée sur le fond bleu */}
               <div className="relative w-80 mx-auto">
                 <Image
-                  src="/photo.png"
                   alt="Portrait d'Océane"
-                  width={320}
-                  height={320}
                   className="object-cover relative z-10"
+                  height={320}
+                  src="/photo.png"
+                  width={320}
                 />
               </div>
             </div>
