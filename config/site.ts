@@ -26,5 +26,7 @@ export const siteConfig = {
     github: "https://github.com/ocjpe",
     gitlab: "https://gitlab.com/ocejpe",
     linkedin: "https://linkedin.com/in/oceane-joppe",
+    cv: "/public/cv.pdf",
+    email: "",
   },
 };

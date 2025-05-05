@@ -13,7 +13,7 @@ export const Navbar = () => {
   return (
     <HeroUINavbar
       className="backdrop-blur-none backdrop-saturate-100"
-      maxWidth="xl"
+      maxWidth="lg"
       position="sticky"
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
