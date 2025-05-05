@@ -1,6 +1,6 @@
+"use client";
 import { Button } from "@heroui/button";
 import { Card, CardBody, CardFooter } from "@heroui/card";
-import { Link } from "@heroui/link";
 
 interface Props {
   alt: string;
@@ -10,7 +10,6 @@ interface Props {
   explain: string;
   content: string;
   link: string;
-  color: string;
   colorButton:
     | "default"
     | "primary"
@@ -22,18 +21,12 @@ interface Props {
 }
 
 export default function Projet(props: Props) {
-  const {
-    alt,
-    src,
-    type,
-    title,
-    explain,
-    content,
-    link,
-    color,
-    colorButton,
-    icon,
-  } = props;
+  const { alt, src, type, title, explain, content, link, colorButton, icon } =
+    props;
+
+  const handleRedirect = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <Card className="group relative bg-gray-900/50 border border-gray-800 hover:border-blue-500 transition-all duration-300 w-[400px] h-[550px] backdrop-blur-sm">
@@ -47,9 +40,7 @@ export default function Projet(props: Props) {
             src={src}
             width={270}
           />
-          <div
-            className={`absolute top-3 right-3 bg-${color}-900/80 text-${color}-100 text-xs font-medium px-2 py-1 rounded z-20`}
-          >
+          <div className="absolute top-3 right-3 bg-blue-900/80 text-blue-100 text-xs font-medium px-2 py-1 rounded z-20">
             {type}
           </div>
         </div>
@@ -62,11 +53,10 @@ export default function Projet(props: Props) {
       </CardBody>
       <CardFooter className="text-small justify-between">
         <Button
-          as={Link}
           color={colorButton}
           endContent={icon}
-          href={link}
           variant="flat"
+          onPress={() => handleRedirect(link)}
         >
           {content}
         </Button>
