@@ -1,4 +1,3 @@
-import { BiExit } from "react-icons/bi";
 import { FaCode } from "react-icons/fa6";
 
 import Projet from "./projet";
@@ -19,15 +18,14 @@ export default function ProjetsPage() {
         {/* Projet 1 */}
         <Projet
           alt="Visuel du Portfolio"
-          color="blue"
-          colorButton="secondary"
-          content="Démo"
+          colorButton="primary"
+          content="Code"
           explain="Pour la construction de ce portfolio, j'ai opté pour Next.js, un framework React qui facilite grandement le développement. 
             J'ai ensuite tiré parti de la puissance de Hero UI et de la flexibilité de Tailwind CSS pour concevoir une interface à la fois moderne et intuitive. 
             Le déploiement continu est assuré par Vercel, et le versionnement du code est géré via GitLab. Ce projet a été une excellente opportunité pour moi 
             de me concentrer sur l'amélioration de l'expérience utilisateur et du design de l'interface."
-          icon={<BiExit />}
-          link="#"
+          icon={<FaCode />}
+          link="https://github.com/ocjpe/Portfolio"
           src="/portfolio.png"
           title="Portfolio"
           type="Web"
@@ -35,7 +33,6 @@ export default function ProjetsPage() {
 
         <Projet
           alt="Visuel du site"
-          color="blue"
           colorButton="primary"
           content="Code"
           explain="Il s'agit d'un site internet qui a été développé dans le but d'aider une sexologue à se lancer en tant qu'auto-entrepreneuse. 
@@ -44,10 +41,10 @@ export default function ProjetsPage() {
             Le site a été déployé sur Vercel et son code source est accessible sur GitLab (avec une migration future vers GitHub). Il est important de préciser que 
             ce site n'est plus en service."
           icon={<FaCode />}
-          link="/components/error.tsx"
+          link="https://github.com/ocjpe/C-Adapte"
           src="/c-adapte.png"
           title="C'Adapté"
-          type="web"
+          type="Web"
         />
       </div>
     </div>
