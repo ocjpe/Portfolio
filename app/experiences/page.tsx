@@ -3,7 +3,7 @@ export default function ExperiencesPage() {
   return (
     <>
       <div className="w-full max-w-6xl mx-auto mt-16 px-4">
-        <h2 className="text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 mb-10">
+        <h2 className="text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 mb-10">
           Expériences Professionnelles
         </h2>
 

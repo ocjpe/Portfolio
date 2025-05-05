@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -10,6 +12,12 @@ import { siteConfig } from "@/config/site";
 import { fontMono } from "@/config/fonts";
 
 export const Navbar = () => {
+  const [activeItem, setActiveItem] = React.useState("/");
+
+  const handleItemClick = (href: string) => {
+    setActiveItem(href);
+  };
+
   return (
     <HeroUINavbar
       className="backdrop-blur-none backdrop-saturate-100"
@@ -19,14 +27,16 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
         <ul className="hidden lg:flex gap-10 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
+            <NavbarItem key={item.href} isActive={activeItem === item.href}>
               <NextLink
                 className={clsx(
                   "text-lg uppercase font-mono",
                   fontMono.variable,
+                  activeItem === item.href ? "text-blue-500" : "",
                 )}
                 color="foreground"
                 href={item.href}
+                onClick={() => handleItemClick(item.href)}
               >
                 {item.label}
               </NextLink>
