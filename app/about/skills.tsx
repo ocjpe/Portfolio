@@ -28,13 +28,11 @@ import {
 import { LuMessagesSquare } from "react-icons/lu";
 import { TbExchange } from "react-icons/tb";
 
-import { title, subtitle } from "@/components/primitives";
-
-export default function SkillsSection() {
+export default function Skills() {
   // Langages et technologies
   const technicalSkills = [
     {
-      category: "FRONT-END",
+      category: "Front-end",
       skills: [
         { name: "JavaScript", icon: <RiJavascriptFill size={25} /> },
         { name: "React", icon: <FaReact size={25} /> },
@@ -109,34 +107,28 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section className="flex flex-col items-start justify-around py-16 md:py-20">
+    <section className="flex flex-col items-start justify-around">
       {/* Titre de section */}
-      <div className="mb-6">
-        <span className={title({ size: "md" })}>{"Mes "}</span>
-        <span className={title({ size: "md", color: "gradient" })}>
-          compétences
-        </span>
-      </div>
+      <h3 className="font-semibold text-gray-200">
+        Mes compétences techniques
+      </h3>
 
       {/* Compétences techniques */}
       <div className="w-full mb-16">
-        <span className={subtitle({ className: "mb-6" })}>
-          Compétences techniques
-        </span>
         <div className="grid grid-cols-4 md:grid-cols-4 gap-8 mt-6">
           {technicalSkills.map((category, index) => (
             <Card
               key={index}
               className="bg-black bg-opacity-40 border border-gray-800"
             >
-              <CardBody key={index} className="items-center">
-                <h3 className="text-xl font-semibold text-white mb-4">
+              <CardBody key={index}>
+                <h3 className="text-lg text-center font-semibold text-white mb-4">
                   {category.category}
                 </h3>
                 {category.skills.map((skill, skillIndex) => (
                   <Chip
                     key={skillIndex}
-                    className="mb-3"
+                    className="mb-3 content-center"
                     color="secondary"
                     radius="sm"
                     size="lg"
@@ -154,7 +146,9 @@ export default function SkillsSection() {
 
       {/* Soft skills */}
       <div className="w-full">
-        <span className={subtitle({ className: "mb-6" })}>Soft skills</span>
+        <h3 className="font-semibold text-gray-200 text-start">
+          Mon savoir-être
+        </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
           {softSkills.map((skill, index) => (
             <Card
@@ -162,11 +156,13 @@ export default function SkillsSection() {
               className="bg-black bg-opacity-40 border border-gray-800"
             >
               <CardBody className="text-center p-6">
-                <div className="flex text-4xl mb-4 justify-center">
+                <div className="flex text-xl mb-3 justify-center text-blue-400">
                   {skill.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
-                <p className="text-gray-300 text-sm">{skill.description}</p>
+                <h3 className="text-m font-semibold mb-2">{skill.name}</h3>
+                <p className="text-gray-300 text-sm text-justify">
+                  {skill.description}
+                </p>
               </CardBody>
             </Card>
           ))}

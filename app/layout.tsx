@@ -26,16 +26,20 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-mono antialiased m-2",
+          "min-h-screen bg-background font-mono antialiased",
           fontMono.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class" }}>
           <div className="relative flex flex-col h-screen">
+            {/* Navbar */}
             <Navbar />
-            {/* Modification: suppression des classes container, padding et margin */}
+
+            {/* Contenu de la page */}
             <main className="flex-grow">{children}</main>
-            <footer className="w-full flex items-center justify-center py-3">
+
+            {/* Pied de page */}
+            <footer className="w-full flex items-center justify-center">
               <span className="text-xs">
                 2025 © Océane Joppé. Tous droits réservés.
               </span>
