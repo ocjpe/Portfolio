@@ -29,32 +29,34 @@ export default function Projet(props: Props) {
   };
 
   return (
-    <Card className="group relative bg-gray-900/50 border border-gray-800 hover:border-blue-500 transition-all duration-300 w-[400px] h-[550px] backdrop-blur-sm">
+    <Card className="group relative bg-gray-900/50 border border-gray-800 hover:border-blue-500 transition-all duration-300 w-full max-w-md mx-auto h-auto min-h-[450px] sm:min-h-[500px] backdrop-blur-sm">
       <CardBody className="overflow-hidden p-0">
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-36 sm:h-48 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
           <img
             alt={alt}
-            className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
-            height={200}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             src={src}
-            width={270}
           />
           <div className="absolute top-3 right-3 bg-blue-900/80 text-blue-100 text-xs font-medium px-2 py-1 rounded z-20">
             {type}
           </div>
         </div>
-        <div className="m-2">
-          <h2 className="text-xl font-semibold text-center text-gray-100 mb-2">
+        <div className="p-3 sm:p-4">
+          <h2 className="text-lg sm:text-xl font-semibold text-center text-gray-100 mb-2">
             {title}
           </h2>
-          <p className="text-default-500 text-sm text-justify">{explain}</p>
+          <p className="text-default-500 text-xs sm:text-sm text-justify line-clamp-[12] sm:line-clamp-none">
+            {explain}
+          </p>
         </div>
       </CardBody>
-      <CardFooter className="text-small justify-between">
+      <CardFooter className="text-small justify-between p-2 sm:p-4">
         <Button
+          className="text-xs sm:text-sm"
           color={colorButton}
           endContent={icon}
+          size="sm"
           variant="flat"
           onPress={() => handleRedirect(link)}
         >

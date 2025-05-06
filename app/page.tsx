@@ -14,17 +14,17 @@ export default function Home() {
     {
       name: "GitHub",
       url: siteConfig.links.github,
-      icon: <FaGithub size={25} />,
+      icon: <FaGithub className="sm:text-2xl" size={22} />,
     },
     {
       name: "GitLab",
       url: siteConfig.links.gitlab,
-      icon: <FaGitlab size={25} />,
+      icon: <FaGitlab className="sm:text-2xl" size={22} />,
     },
     {
       name: "LinkedIn",
       url: siteConfig.links.linkedin,
-      icon: <FaLinkedin size={25} />,
+      icon: <FaLinkedin className="sm:text-2xl" size={22} />,
     },
   ];
 
@@ -33,27 +33,43 @@ export default function Home() {
   };
 
   return (
-    <section className="h-[calc(100vh-64px)] flex flex-col justify-center px-3 md:px-7">
-      <div className="flex flex-col md:flex-row items-center justify-between">
-        <div className="text-start md:w-1/2">
+    <section className="min-h-[calc(100vh-64px)] flex flex-col justify-center px-4 py-8 md:px-7">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
+        <div className="text-center md:text-start w-full md:w-1/2">
           {/* Titre */}
-          <div>
-            <span className={title({ size: "lg" })}>{"Bonjour. Je suis "}</span>
-            <span className={title({ size: "lg", color: "gradient" })}>
+          <div className="mb-2">
+            <span className={title({ size: "md", class: "sm:text-5xl" })}>
+              {"Bonjour. Je suis "}
+            </span>
+            <span
+              className={title({
+                size: "md",
+                color: "gradient",
+                class: "sm:text-5xl",
+              })}
+            >
               Océane
             </span>
-            <span className={title({ size: "lg" })}>{", "}</span>
+            <span className={title({ size: "md", class: "sm:text-5xl" })}>
+              {", "}
+            </span>
           </div>
-          <br />
-          <div className="mb-8 whitespace-nowrap">
-            <span className={title({ size: "lg", color: "gradient" })}>
+
+          <div className="mb-6 md:mb-8">
+            <span
+              className={title({
+                size: "md",
+                color: "gradient",
+                class: "sm:text-5xl",
+              })}
+            >
               développeuse informatique
             </span>
           </div>
 
           {/* Texte d'introduction */}
           <div>
-            <p className="text-gray-300 text-lg text-justify">
+            <p className="text-gray-300 text-base sm:text-lg text-justify">
               Bienvenue sur mon portfolio ! Je m&apos;appelle Océane JOPPÉ, je
               suis développeuse et conceptrice d&apos;applications basée à
               Montpellier depuis septembre 2024. Je suis originaire de
@@ -64,14 +80,16 @@ export default function Home() {
           </div>
 
           {/* Réseaux sociaux */}
-          <div className="flex pt-10">
+          <div className="flex flex-wrap gap-2 pt-6 md:pt-10">
             {socialLinks.map((link) => (
               <Button
                 key={link.name}
-                className="mr-6"
+                className="text-xs sm:text-sm"
                 color="primary"
                 endContent={link.icon}
                 name={link.name.toLowerCase()}
+                radius="full"
+                size="sm"
                 variant="flat"
                 onPress={() => handleRedirect(link.url)}
               >
@@ -79,10 +97,14 @@ export default function Home() {
               </Button>
             ))}
             <Button
-              className="mr-6"
+              className="text-xs sm:text-sm"
               color="primary"
-              endContent={<PiReadCvLogoFill size={25} />}
+              endContent={
+                <PiReadCvLogoFill className="sm:text-2xl" size={22} />
+              }
               name="CV"
+              radius="full"
+              size="sm"
               variant="flat"
               onPress={() =>
                 window.open("/cv.pdf", "_blank", "noopener noreferrer")
@@ -92,11 +114,15 @@ export default function Home() {
             </Button>
             <Button
               as={Link}
-              className="mr-6"
+              className="text-xs sm:text-sm"
               color="primary"
-              endContent={<MdAlternateEmail size={25} />}
+              endContent={
+                <MdAlternateEmail className="sm:text-2xl" size={22} />
+              }
               href="mailto:oceane.joppe@gmail.com"
-              name="CV"
+              name="Email"
+              radius="full"
+              size="sm"
               variant="flat"
             >
               Email
@@ -105,17 +131,18 @@ export default function Home() {
         </div>
 
         {/* Image Portrait */}
-        <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center items-center">
+        <div className="w-full md:w-1/2 flex justify-center items-center mt-8 md:mt-0">
           <div className="relative">
-            <div className="absolute w-full max-w-lg h-[16rem] bg-blue-600 rounded-t-full top-16 left-1/2 transform -translate-x-1/2 shadow-xl shadow-blue-900" />
+            <div className="absolute w-full max-w-xs sm:max-w-md h-40 sm:h-52 bg-blue-600 rounded-t-full top-10 sm:top-16 left-1/2 transform -translate-x-1/2 shadow-xl shadow-blue-900" />
 
-            <div className="relative w-80 mx-auto">
+            <div className="relative w-60 sm:w-72 md:w-80 mx-auto">
               <Image
+                priority
                 alt="Portrait d'Océane"
                 className="object-cover relative z-10"
-                height={320}
+                height={280}
                 src="/photo.png"
-                width={320}
+                width={280}
               />
             </div>
           </div>

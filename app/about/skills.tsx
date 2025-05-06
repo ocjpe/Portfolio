@@ -107,15 +107,15 @@ export default function Skills() {
   ];
 
   return (
-    <section className="flex flex-col items-start justify-around">
+    <section className="flex flex-col items-start justify-around w-full px-4 md:px-0">
       {/* Titre de section */}
       <h3 className="font-semibold text-gray-200">
         Mes compétences techniques
       </h3>
 
       {/* Compétences techniques */}
-      <div className="w-full mb-16">
-        <div className="grid grid-cols-4 md:grid-cols-4 gap-8 mt-6">
+      <div className="w-full mb-8 md:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mt-6">
           {technicalSkills.map((category, index) => (
             <Card
               key={index}
@@ -125,19 +125,23 @@ export default function Skills() {
                 <h3 className="text-lg text-center font-semibold text-white mb-4">
                   {category.category}
                 </h3>
-                {category.skills.map((skill, skillIndex) => (
-                  <Chip
-                    key={skillIndex}
-                    className="mb-3 content-center"
-                    color="secondary"
-                    radius="sm"
-                    size="lg"
-                    startContent={skill.icon}
-                    variant="flat"
-                  >
-                    <span className="pl-1">{skill.name}</span>
-                  </Chip>
-                ))}
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {category.skills.map((skill, skillIndex) => (
+                    <Chip
+                      key={skillIndex}
+                      className="mb-2"
+                      color="secondary"
+                      radius="sm"
+                      size="md"
+                      startContent={
+                        <div className="flex items-center">{skill.icon}</div>
+                      }
+                      variant="flat"
+                    >
+                      <span className="pl-1 text-sm">{skill.name}</span>
+                    </Chip>
+                  ))}
+                </div>
               </CardBody>
             </Card>
           ))}
@@ -149,13 +153,13 @@ export default function Skills() {
         <h3 className="font-semibold text-gray-200 text-start">
           Mon savoir-être
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-6">
           {softSkills.map((skill, index) => (
             <Card
               key={index}
               className="bg-black bg-opacity-40 border border-gray-800"
             >
-              <CardBody className="text-center p-6">
+              <CardBody className="text-center p-4 md:p-6">
                 <div className="flex text-xl mb-3 justify-center text-blue-400">
                   {skill.icon}
                 </div>

@@ -16,77 +16,79 @@ export default function About() {
   return (
     <>
       {/* Introduction */}
-      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4 py-8">
+      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-3 sm:px-4 py-6 sm:py-8">
         <div className="w-full max-w-4xl">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6 sm:mb-10">
             {/* À propos de moi */}
-            <div className="w-full p-6 md:p-8 rounded-lg">
-              <div className="mb-6">
-                <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 text-center mb-10">
+            <div className="w-full p-4 sm:p-6 md:p-8 rounded-lg">
+              <div className="mb-4 sm:mb-6">
+                <h2 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 text-center mb-6 sm:mb-10">
                   À propos de moi
                 </h2>
-                <div className="flex items-center mb-4 text-gray-300">
-                  <FaMapPin className="mr-3 flex-shrink-0 text-blue-400" />
-                  <span>Montpellier, France</span>
-                </div>
-                <div className="flex items-center mb-4 text-gray-300">
-                  <MdWork className="mr-3 flex-shrink-0 text-blue-400" />
-                  <span>Recherche d&apos;emploi (CDD, CDI, Intérim)</span>
-                </div>
-                <div className="flex items-center mb-4 text-gray-300">
-                  <IoBusiness className="mr-3 flex-shrink-0 text-blue-400" />
-                  <span>
-                    Sur site, télétravail partiel, télétravail complet
-                  </span>
+                <div className="flex flex-col sm:flex-row sm:justify-center sm:flex-wrap gap-3 sm:gap-6">
+                  <div className="flex items-center text-gray-300">
+                    <FaMapPin className="mr-3 flex-shrink-0 text-blue-400" />
+                    <span>Montpellier, France</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <MdWork className="mr-3 flex-shrink-0 text-blue-400" />
+                    <span>Recherche d&apos;emploi (CDD, CDI, Intérim)</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <IoBusiness className="mr-3 flex-shrink-0 text-blue-400" />
+                    <span className="text-start">
+                      Sur site, télétravail partiel, télétravail complet
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="border-b border-gray-800 mb-6">
-              <nav className="flex justify-center space-x-8">
+            <div className="border-b border-gray-800 mb-4 sm:mb-6 overflow-x-auto pb-1">
+              <nav className="flex justify-center min-w-max mx-auto">
                 {/* Bouton Parcours */}
                 <button
-                  className={`py-2 px-4 border-b-2 font-medium text-sm flex items-center ${
+                  className={`py-2 px-3 sm:px-4 border-b-2 font-medium text-xs sm:text-sm flex items-center whitespace-nowrap ${
                     activeTab === "parcours"
                       ? "border-blue-500 text-blue-400"
                       : "border-transparent text-gray-400 hover:text-gray-300 hover:border-gray-600"
                   }`}
                   onClick={() => setActiveTab("parcours")}
                 >
-                  <FaGraduationCap className="mr-2" size={16} />
+                  <FaGraduationCap className="mr-1 sm:mr-2" size={14} />
                   Parcours
                 </button>
 
                 {/* Bouton Compétences */}
                 <button
-                  className={`py-2 px-4 border-b-2 font-medium text-sm flex items-center ${
+                  className={`py-2 px-3 sm:px-4 border-b-2 font-medium text-xs sm:text-sm flex items-center whitespace-nowrap ${
                     activeTab === "competences"
                       ? "border-blue-500 text-blue-400"
                       : "border-transparent text-gray-400 hover:text-gray-300 hover:border-gray-600"
                   }`}
                   onClick={() => setActiveTab("competences")}
                 >
-                  <GiSkills className="mr-2" size={16} />
+                  <GiSkills className="mr-1 sm:mr-2" size={14} />
                   Compétences
                 </button>
 
                 {/* Bouton Passions */}
                 <button
-                  className={`py-2 px-4 border-b-2 font-medium text-sm flex items-center ${
+                  className={`py-2 px-3 sm:px-4 border-b-2 font-medium text-xs sm:text-sm flex items-center whitespace-nowrap ${
                     activeTab === "passions"
                       ? "border-blue-500 text-blue-400"
                       : "border-transparent text-gray-400 hover:text-gray-300 hover:border-gray-600"
                   }`}
                   onClick={() => setActiveTab("passions")}
                 >
-                  <FaHeart className="mr-2" size={16} />
+                  <FaHeart className="mr-1 sm:mr-2" size={14} />
                   Passions & Intérêts
                 </button>
               </nav>
             </div>
 
             {/* Onglets */}
-            <div className="mt-6">
+            <div className="mt-4 sm:mt-6">
               {activeTab === "parcours" && <Formations />}
               {activeTab === "competences" && <Skills />}
               {activeTab === "passions" && <Hobbies />}
