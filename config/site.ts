@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Portfolio d'Océane",
-  description: "Voici mon parcours professionnel.",
+  description: "Portfolio - Développeuse Informatique",
   navItems: [
     {
       label: "Accueil",
@@ -27,6 +27,5 @@ export const siteConfig = {
     gitlab: "https://gitlab.com/ocejpe",
     linkedin: "https://linkedin.com/in/oceane-joppe",
     cv: "/public/cv.pdf",
-    email: "",
   },
 };
