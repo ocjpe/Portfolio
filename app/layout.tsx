@@ -14,9 +14,47 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  keywords: [
+    "portfolio",
+    "développeur web",
+    "Océane Joppé",
+    "front-end",
+    "design",
+    "projets web",
+    "back-end",
+  ],
+  authors: [{ name: "Océane Joppé", url: "https://ocejpe.fr" }],
+  creator: "Océane Joppé",
+  publisher: "Océane Joppé",
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://ocejpe.fr",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
   },
+  alternates: {
+    canonical: "https://ocejpe.fr/",
+  },
+  metadataBase: new URL("https://ocejpe.fr/"),
 };
 
 export default function RootLayout({
