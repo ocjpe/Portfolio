@@ -2,7 +2,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Portfolio d'Océane",
-  description: "Portfolio - Développeuse Informatique",
+  description:
+    "Portfolio de Océane Joppé - Développeuse web front-end et back-end. Découvrez mes réalisations sur ici ! ",
   navItems: [
     {
       label: "Accueil",

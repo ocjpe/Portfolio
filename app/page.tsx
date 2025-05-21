@@ -143,6 +143,7 @@ export default function Home() {
                 height={280}
                 src="/photo.png"
                 width={280}
+                robots="noindex"
               />
             </div>
           </div>
