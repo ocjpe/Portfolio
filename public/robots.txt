@@ -1,10 +1,14 @@
-# *
+# User agents
+User-agent: Googlebot-Image
+Disallow: /photo.png
+
 User-agent: *
 Allow: /
+Disallow: /photo.png
 
 # Host
-Host: https://ocejpe.fr/
+Host: https://ocejpe.fr
 
 # Sitemaps
 Sitemap: https://ocejpe.fr/sitemap.xml
-Sitemap: https://ocejpe.fr//server-sitemap.xml
+Sitemap: https://ocejpe.fr/server-sitemap.xml
