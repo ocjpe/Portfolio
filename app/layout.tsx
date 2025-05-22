@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     url: "https://ocejpe.fr",
     title: siteConfig.name,
     description: siteConfig.description,
-    siteName: siteConfig.name,
+    siteName: "Océane Joppé",
     images: [
       {
         url: "/logo.png",
